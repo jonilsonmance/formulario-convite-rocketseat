@@ -1,0 +1,37 @@
+input, textarea{
+    width: 100%;
+    padding: .8rem 1rem;
+    background-color:var(--input-base) ;
+    border: 1px solid var(--input-stroke);
+    border-radius: .5rem;
+    color: white;
+
+    
+
+    ::placeholder{
+        font: var(--BodyMd);
+        color: var(--input-placeholder);
+    }
+
+    &:invalid{
+        border: 0.125rem solid var(--danger);
+    }
+
+    &:valid + .error{
+        display: none;
+    }
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--brand-light); 
+    outline: none; 
+}
+
+label{
+    display: block;
+    font: var(--BodySm);
+    color: var(--text-body);
+    padding-bottom: .75rem;
+    padding-top: 1rem;
+}
